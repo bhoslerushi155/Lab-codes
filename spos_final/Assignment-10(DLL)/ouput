@@ -1,0 +1,16 @@
+	at JNITest.<clinit>(JNITest.java:3)
+jagannath@jagannath-Lenovo-G50-80:~$ javac JNITest.java 
+jagannath@jagannath-Lenovo-G50-80:~$ javah JNITest
+jagannath@jagannath-Lenovo-G50-80:~$ g++ -fPIC -shared -I /usr/lib/jvm/java-1.8.0-openjdk-amd64/include -I /usr/lib/jvm/java-1.8.0-openjdk-amd64/include/linux -I home/jagannath -o /home/jagannath/mynativelib.so /home/jagannath/JNI.cpp
+jagannath@jagannath-Lenovo-G50-80:~$ java JNITest 
+	Calculator
+Enter first number
+3
+
+Enter 2nd number
+4
+
+Enter operation
++
+
+Result is:7jagannath@jagannath-Lenovo-G5

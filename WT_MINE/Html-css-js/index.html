@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Demo</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="valid.js"></script>
+        <script src="jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <section id="background">
+            <header>
+            <section id="header-title">
+                Brownwood restaurent
+            </section>
+            <nav id="nav-bar">
+                <ul id="nav-list">
+                    <li class="nav-item">Home</li>
+                    <li class="nav-item">Menu
+                        <ul>
+                            <li class="nav-hidden-list">item-1</li>
+                            <li class="nav-hidden-list">item-2</li>
+                            <li class="nav-hidden-list">item-3</li>
+                            <li class="nav-hidden-list">item-4</li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">About-us</li>
+                    <li class="nav-item">contact-us</li>
+                </ul>
+            </nav>
+        </header>
+
+        </section>
+        <div>
+
+            <div id="buttons">
+                <button id="res-button">Reservation</button>
+                <button id="sign-button">Sign up</button>
+            </div>
+            <div id="res-form">
+            <form action="#background"  onsubmit="validate()" name="form">
+                <h3>Reservation from</h3>
+                <input type="text" name="name" placeholder="Your name" id="first-element"  class="clear" required>
+                <input type="text" name="email" placeholder="Your Email"  class="clear" required>
+                <input type="text" name="mob" placeholder="Your mobile number" class="clear" required>
+                <input type="text" name="website" placeholder="website name" class="clear" required>
+                <select id="select-opt">options
+                    <div id="inner-div">
+                        <option>option-1</option>
+                        <option>option-2</option>
+                        <option>option-3</option>
+                    </div>
+                </select>
+                <textarea rows="5" cols="10" placeholder="Enter message" class="clear"></textarea>
+                <input type="submit" value="Submit" class="form-button">
+                <input type="button" value="Reset" id="reset-button" class="form-button">
+            </form>
+            </div>
+
+            <div id="signup">
+                <form action="#background"  onsubmit="validate()" name="form2">
+                <h3>Sign up</h3>
+                <input type="text" name="name" placeholder="Your name" id="first-element" required>
+                <input type="text" name="email" placeholder="Your Email" required>
+                <input type="text" name="mob" placeholder="Your mobile number" required>
+                <input type="submit" value="Submit" class="form-button">
+                <input type="button" value="Reset" id="reset-button2" class="form-button">
+            </form>
+            </div>
+        </div>
+
+
+
+        <div id="outer">
+            <p>This is outer div</p>
+            <div id="inner">
+            <p>This is inner div</p>
+            </div>
+        </div>
+
+        <div id="animate-outer">
+            <div id="animate"></div>
+
+        </div>
+        <footer>
+            <section>
+                <p>copyright Brownwood Restaurent</p>
+            </section>
+        </footer>
+        <script src="jquery-effects.js"></script>
+    </body>
+</html>

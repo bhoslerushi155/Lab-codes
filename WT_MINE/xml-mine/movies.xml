@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="movies.xsl" type="text/xsl"?>
+<!DOCTYPE collection[
+<!ELEMENT collection (title,duration,price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT duration (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+]>
+<collection>
+    <movie>
+        <title>3 idiots</title>
+        <duration>3:00</duration>
+        <price>500</price>
+    </movie>
+    <movie>
+        <title>dabangg</title>
+        <duration>2:50</duration>
+        <price>200</price>
+    </movie>
+    <movie>
+        <title>swades</title>
+        <duration>3:45</duration>
+        <price>400</price>
+    </movie>
+    <movie>
+        <title>chak de india</title>
+        <duration>4:10</duration>
+        <price>300</price>
+    </movie>
+</collection>

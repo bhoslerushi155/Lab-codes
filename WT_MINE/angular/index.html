@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Employee Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="ang.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myController">
+        <form name="myForm">
+            <input type="text" ng-model="name" required><br><br>
+            <input type="text" ng-model="email" required><br><br>
+            <button ng-click="add()">Add</button><br><br>
+
+        </form>
+
+        <div >
+            <table >
+                <th>Name</th>
+                <th>Email</th>
+                <tr ng-repeat="x in arr">
+                    <td>{{x.name}}</td>
+                    <td>{{x.email}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
