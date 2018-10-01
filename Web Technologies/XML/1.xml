@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="1.xsl"?>
+<breakfast_menu>
+
+<food>
+<name>Ice Cream</name>
+<price>100</price>
+<description>Ice creams are avaliable in various flavours like strawberry, chocolate  etc..</description>
+<calories>650</calories>
+</food>
+
+<food>
+<name>Coke</name>
+<price>50</price>
+<description>coke is carbonated cold drink for refreshment</description>
+<calories>400</calories>
+</food>
+
+<food>
+<name>Pizza</name>
+<price>200</price>
+<description>Pizza is the famous food item originated from itlay </description>
+<calories>900</calories>
+</food>
+
+<food>
+<name>Burger</name>
+<price>50</price>
+<description>Burger is a famous food item</description>
+<calories>600</calories>
+</food>
+
+</breakfast_menu> 

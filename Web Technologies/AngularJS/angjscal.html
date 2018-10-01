@@ -1,0 +1,25 @@
+<!doctype html>
+<html >
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js">
+</script>
+<script src="cal.js">
+
+</script>
+</head>
+
+<body>
+<h3>calculator using jsp</h3>
+<div ng-app="calc" ng-controller="calccontro">
+<form ng-submit="calccontro()">
+<input type="number" name="num1" ng-model="num1"><br><br>
+<input type="number" name="num2" ng-model="num2"><br><br>
+<input type="radio" name="opr1" ng-model="opr1" value="+" selected>Add
+<input type="radio" name="opr1" ng-model="opr1" value="-">substract
+<input type="radio" name="opr1" ng-model="opr1" value="*">multiply
+<input type="radio" name="opr1" ng-model="opr1" value="/">division<br>
+</form>
+{{num1}}{{opr1}}{{num2}}={{result(opr1)}}
+</div>
+</body>
+</html>

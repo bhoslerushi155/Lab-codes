@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>A</servlet-name>
+        <servlet-class>test.s1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>A</servlet-name>
+        <url-pattern>/starwars</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>B</servlet-name>
+        <servlet-class>test.s2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>B</servlet-name>
+        <url-pattern>/starwars1</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>C</servlet-name>
+        <servlet-class>test.s3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>C</servlet-name>
+        <url-pattern>/starwars2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>D</servlet-name>
+        <servlet-class>test.s4</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>D</servlet-name>
+        <url-pattern>/starwars3</url-pattern>
+    </servlet-mapping>
+   
+</web-app>

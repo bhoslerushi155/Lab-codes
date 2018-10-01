@@ -1,0 +1,93 @@
+%{
+#include<stdio.h>
+#include<string.h>
+int lines=0,chars=0,words=0;
+
+
+struct node{
+	char *id,*type;
+	struct node* next;
+};
+struct node* head=NULL;
+struct node* curr=NULL;
+
+
+
+int lookup(char* str){
+	struct node* temp=head;
+	while(temp!=NULL){
+		if(strcmp(temp->id,str)==0){
+			return 1;
+		}
+		temp=temp->next;
+	}
+	return 0;
+}
+
+void add(char* id,char* type){
+	if(lookup(id)){
+		return;
+	}
+	if(head==NULL){
+		head=(struct node*)malloc(sizeof(struct node));
+		curr=head;
+		head->next=NULL;
+	}
+	else{
+		curr->next=(struct node*)malloc(sizeof(struct node));
+		curr=curr->next;
+		curr->next=NULL;
+	}
+	curr->id=strdup(id);
+	if(type=="class" || type=="function"){
+		int len=strlen(curr->id);
+		curr->id[--len]='\0';
+	}
+	curr->type=type;
+}
+
+void display(struct node* head){
+	struct node* temp=head;
+	printf("\n\n***********SYMBOL TABLE *********\n");
+	printf("symbol\t type\n\n");
+	while(temp!=NULL){
+		printf("%s\t%s\n",temp->id,temp->type);
+		temp=temp->next;
+	}
+}
+
+
+
+
+%}
+
+KW class|import|static|main|return|"args[]"
+DT int|double|float|char|void|String
+PG java.util.*|java.lang.*
+AS public|private|protected
+CN [a-zA-Z][a-zA-Z0-z]+[{]
+FN [a-zA-Z][a-zA-Z0-z]+[(]
+ID  [a-zA-Z][a-zA-Z0-z]+
+%%
+
+{DT} {printf("%s :-datatype\n",yytext);}
+{PG} {printf("%s :-package\n",yytext);}
+{AS} {printf("%s :-access specifier\n",yytext);}
+{KW} {printf("%s :-keyword\n",yytext);}
+{CN} {printf("%s :-class name\n",yytext);add(yytext,"class");}
+{FN} {printf("%s :-function name\n",yytext);add(yytext,"function");}
+{ID} {printf("%s :-identifier\n",yytext);add(yytext,"identifier");}
+. { ;}
+
+%%
+
+void main(){
+	yyin=fopen("a.java","r");
+	yylex();
+	display(head);
+}
+
+int yywrap(){
+return 1;
+}
+
